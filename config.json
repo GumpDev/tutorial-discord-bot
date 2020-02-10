@@ -1,0 +1,7 @@
+{
+    "token": " Seu Token aqui ",
+    "debug": true,
+    "prefix": "!",
+
+    "avisosChannelId": " Seu id do avisos aqui "
+}

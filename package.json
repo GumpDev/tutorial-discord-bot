@@ -5,11 +5,12 @@
     "main": "core.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node core"
+        "start": "nodemon core"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "discord.js": "^11.5.1"
+        "discord.js": "^11.5.1",
+        "nodemon": "^2.0.2"
     }
 }
