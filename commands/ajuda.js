@@ -1,5 +1,6 @@
 const config    = require("../config.json");
 const commands  = require("../scripts/commandsReader")(config.prefix);
+const permissions = config.permissions;
 
 const descriptions = {
     "!ajuda": "Use esse comando para ver os comandos disponiveis",
@@ -12,7 +13,9 @@ const descriptions = {
 module.exports = async (client,msg) =>{
     var texto = "Comandos:";
     Object.keys(commands).forEach(command => {
-        texto += `\n ${command}: ${descriptions[command] ? descriptions[command] : 'Não tem descrição'}`
+        if(permissions[command]){
+            if(msg.member.hasPermission(permissions[command])) texto += `\n ${command}: ${descriptions[command] ? descriptions[command] : 'Não tem descrição'}`
+        }else texto += `\n ${command}: ${descriptions[command] ? descriptions[command] : 'Não tem descrição'}`
     });
     msg.reply(texto);
 };

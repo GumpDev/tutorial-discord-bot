@@ -1,8 +1,13 @@
 {
-    "token": "Njc2MjMyNzU4MDExNDk0NDA1.Xk7CgQ.LLOHNdhjWpoBLI0pt8pBfOe3b6Q",
+    "token": "Njc2MjMyNzU4MDExNDk0NDA1.Xk7Few.i6s39Rl5R-cbnQ3W9qs0NfgL01w",
     "debug": true,
     "prefix": "!",
 
     "avisosChannelId": "676243402848862278",
-    "boasVindasChannelId": "680104835319595013"
+    "boasVindasChannelId": "680104835319595013",
+
+    "permissions": {
+        "!clear": "ADMINISTRATOR",
+        "!aviso": "ADMINISTRATOR"
+    }
 }
