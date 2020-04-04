@@ -27,12 +27,12 @@ client.on("message",(msg)=>{
 });
 
 client.on("guildMemberAdd",(member)=>{
-    const boasVindasChannel = member.guild.channels.find(channel=>channel.id == config.boasVindasChannelId);
+    const boasVindasChannel = member.guild.channels.cache.find(channel=>channel.id == config.boasVindasChannelId);
     boasVindasChannel.send(`${member.user} acabou de entrar em nosso servidor :P yey`);
     member.send("Bem vindo ao nosso servidor\nSe divirta 😃");
 });
 client.on("guildMemberRemove",(member)=>{
-    const boasVindasChannel = member.guild.channels.find(channel=>channel.id == config.boasVindasChannelId);
+    const boasVindasChannel = member.guild.channels.cache.find(channel=>channel.id == config.boasVindasChannelId);
     boasVindasChannel.send(`${member.user} saiu do server :( awwww 😔`);
 });
 
