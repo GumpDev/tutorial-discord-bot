@@ -1,13 +1,23 @@
 {
-    "token": "Njc2MjMyNzU4MDExNDk0NDA1.XoiaqQ.sY50T9ylFTNoLUC4sfxyWs_vAFA",
+    "token": "Njc2MjMyNzU4MDExNDk0NDA1.XrRTaA.5LcFRvzwgYYDthp8UgXc7dFKA98",
     "debug": true,
     "prefix": "!",
 
     "avisosChannelId": "676243402848862278",
     "boasVindasChannelId": "680104835319595013",
 
-    "permissions": {
-        "!clear": "ADMINISTRATOR",
-        "!aviso": "ADMINISTRATOR"
+    "permissions":{
+        "!aviso":[
+            {
+                "type": "role",
+                "value": "680110141642899602"
+            }
+        ],
+        "!clear":[
+            {
+                "type": "permission",
+                "value": "ADMINISTRATOR"
+            }
+        ]
     }
 }
