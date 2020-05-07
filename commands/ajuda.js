@@ -5,7 +5,8 @@ const descriptions = {
     "!ajuda": "Use esse comando para ver os comandos disponiveis",
     "!aviso": "Avise as pessoas do server",
     "!clear": "Limpe o chat",
-    "!ping":  "Pingue o bot"
+    "!ping":  "Pingue o bot",
+    "!frutas": "Escolha uma fruta!"
 };
 const permissions = config.permissions;
 
