@@ -26,8 +26,9 @@ Este é um projeto gravado em uma série de videos no meu [canal](https://www.yo
 2. [Comandos](https://www.youtube.com/watch?v=kr8xtfICHgI&t=550s)
 3. [Arquivo de configuração, nodemon e avisos](https://www.youtube.com/watch?v=ba-voj6-4iM&t=48s)
 4. [Comando de ajuda e erro ao digitar comando errado](https://www.youtube.com/watch?v=-F5hpbA5I_8)
-5. [(Bônus) Migrando da v11 para v12](https://www.youtube.com/watch?v=-9zK1Pl-LaI)
-6. [Mensagens de boas vindas](https://www.youtube.com/watch?v=rrNnvZ8NmJ0)
+4.5. [(Bônus) Migrando da v11 para v12](https://www.youtube.com/watch?v=-9zK1Pl-LaI)
+5. [Mensagens de boas vindas](https://www.youtube.com/watch?v=rrNnvZ8NmJ0)
+6. [Permissões](https://www.youtube.com/watch?v=PbIRleErlkI)
 
 ### Instalação e Configuração
 Para baixar e instalar o projeto você precisa ter o [node](https://nodejs.org/en/), npm e git instalado.
