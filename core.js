@@ -18,7 +18,7 @@ client.on("message",(msg)=>{
         const args = msg.content.split(" ");
         if(commands[args[0]]){
             if(verificarPermissao(msg.member,args[0]))
-                commands[args[0]](client,msg);
+                commands[args[0]](client,msg, args);
             else msg.reply("você não tem permissão para executar esse comando!");
         }else if(args[0].startsWith(config.prefix)) unknowCommand(client,msg);
     }
