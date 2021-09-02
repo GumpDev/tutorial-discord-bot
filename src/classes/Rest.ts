@@ -21,7 +21,6 @@ class Rest {
             const data = new SlashCommandBuilder()
               .setName(command.name.toLowerCase())
               .setDescription(command.description);
-            console.log(data);
             return data.toJSON();
           }),
         });
