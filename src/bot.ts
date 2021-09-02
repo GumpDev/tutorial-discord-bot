@@ -11,16 +11,16 @@ const init = () => {
     console.error("O Token não foi encontrado!");
     return;
   }
-  // if (!process.env.CLIENT_ID) {
-  //   console.error("O ClientId não foi encontrado!");
-  //   return;
-  // }
+  if (!process.env.CLIENT_ID) {
+    console.error("O ClientId não foi encontrado!");
+    return;
+  }
 
-  // const rest = new Rest(process.env.TOKEN, process.env.CLIENT_ID);
-  // rest.registerCommands(Commands);
-  // rest.start();
+  const rest = new Rest(process.env.TOKEN, process.env.CLIENT_ID);
+  rest.registerCommands(Commands);
+  rest.start();
   const bot = new Bot(process.env.TOKEN);
-  // const commands = new CommandListener(Commands);
+  const commands = new CommandListener(Commands);
   bot.start();
 };
 init();
