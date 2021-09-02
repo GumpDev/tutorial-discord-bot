@@ -23,7 +23,8 @@ Este é um projeto gravado em uma série de videos no meu [canal](https://www.yo
 
 ### Acompanhe os videos do projeto:
 
-1. [Em Breve]()
+1. [Configurando o Projeto](https://youtu.be/5d_SAvD9xuQ)
+1. [Iniciando o Bot](https://youtu.be/IkyveMOEPHg)
 
 ### Instalação e Configuração
 
@@ -43,4 +44,4 @@ $ npm install
 $ npm start
 ```
 
-As configurações vão sendo feitas durante os videos, para saber como pegar seu token e iniciar seu bot veja o (Em Breve)[1º Video]()
+As configurações vão sendo feitas durante os videos, para saber como pegar seu token e iniciar seu bot veja o [1º Video](https://youtu.be/5d_SAvD9xuQ)
