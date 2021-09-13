@@ -24,7 +24,9 @@ Este é um projeto gravado em uma série de videos no meu [canal](https://www.yo
 ### Acompanhe os videos do projeto:
 
 1. [Configurando o Projeto](https://youtu.be/5d_SAvD9xuQ)
-1. [Iniciando o Bot](https://youtu.be/IkyveMOEPHg)
+2. [Iniciando o Bot](https://youtu.be/IkyveMOEPHg)
+3. [Comandos](https://youtu.be/HBma8LJRm7U)
+4. [Opções de comandos](https://youtu.be/xQzjgyeoEfI)
 
 ### Instalação e Configuração
 

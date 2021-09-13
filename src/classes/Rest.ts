@@ -1,7 +1,8 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
+import { SlashCommandOptionBase } from "@discordjs/builders/dist/interactions/slashCommands/mixins/CommandOptionBase";
 import { REST } from "@discordjs/rest";
 import { Routes } from "discord-api-types/v9";
-import Command from "../interfaces/Command";
+import Command, { Option, OptionType } from "../interfaces/Command";
 
 class Rest {
   private rest: REST;
@@ -21,7 +22,8 @@ class Rest {
             const data = new SlashCommandBuilder()
               .setName(command.name.toLowerCase())
               .setDescription(command.description);
-            return data.toJSON();
+            const dataWithOptions = this.addFields(data, command.options);
+            return dataWithOptions.toJSON();
           }),
         });
         console.log(
@@ -31,6 +33,69 @@ class Rest {
         console.error(error);
       }
     })();
+  }
+  addField<T extends SlashCommandOptionBase>(slashOption: T, option: Option) {
+    return slashOption
+      .setName(option.name.toLowerCase())
+      .setDescription(option.description)
+      .setRequired(option.required ? true : false);
+  }
+  addFields(data: SlashCommandBuilder, options?: Option[]) {
+    options &&
+      options.forEach((option) => {
+        switch (option.type) {
+          case OptionType.Boolean:
+            data.addBooleanOption((slashOption) =>
+              this.addField(slashOption, option)
+            );
+            break;
+          case OptionType.Channel:
+            data.addChannelOption((slashOption) =>
+              this.addField(slashOption, option)
+            );
+            break;
+          case OptionType.Integer:
+            data.addIntegerOption((slashOption) => {
+              const newSlashOption = this.addField(slashOption, option);
+
+              option.choices &&
+                option.choices.forEach((choice) =>
+                  newSlashOption.addChoice(choice.name, parseInt(choice.value))
+                );
+
+              return newSlashOption;
+            });
+            break;
+          case OptionType.Mention:
+            data.addMentionableOption((slashOption) =>
+              this.addField(slashOption, option)
+            );
+            break;
+          case OptionType.Role:
+            data.addRoleOption((slashOption) =>
+              this.addField(slashOption, option)
+            );
+            break;
+          case OptionType.String:
+            data.addStringOption((slashOption) => {
+              const newSlashOption = this.addField(slashOption, option);
+
+              option.choices &&
+                option.choices.forEach((choice) =>
+                  newSlashOption.addChoice(choice.name, choice.value)
+                );
+
+              return newSlashOption;
+            });
+            break;
+          case OptionType.User:
+            data.addUserOption((slashOption) =>
+              this.addField(slashOption, option)
+            );
+            break;
+        }
+      });
+    return data;
   }
 }
 
